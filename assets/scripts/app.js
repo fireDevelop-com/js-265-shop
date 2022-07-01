@@ -1,9 +1,8 @@
 class Product {
-
-  constructor(title, image, desc, price) {
+  constructor(title, image, description, price) {
     this.title = title;
     this.imageUrl = image;
-    this.description = desc;
+    this.description = description;
     this.price = price;
   }
 }
@@ -41,6 +40,15 @@ class Component {
 }
 
 class ShoppingCart extends Component {
+  constructor(renderHookId) {
+    super(renderHookId, false);
+    this.orderProducts = () => {
+      console.log('Ordering...');
+      console.log(this.items);
+    };
+    this.render();
+  }
+  
   items = [];
 
   set cartItems(value) {
@@ -58,14 +66,7 @@ class ShoppingCart extends Component {
     return sum;
   }
 
-  constructor(renderHookId) {
-    super(renderHookId, false);
-    this.orderProducts = () => {
-      console.log('Ordering...');
-      console.log(this.items);
-    };
-    this.render();
-  }
+
 
   addProduct(product) {
     const updatedItems = [...this.items];
