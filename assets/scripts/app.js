@@ -34,7 +34,7 @@ class Component {
         rootElement.setAttribute(attr.name, attr.value);
       }
     }
-    document.getElementById(this.hookId).append(rootElement);
+    document.getElementById(this.appId).append(rootElement);
     return rootElement;
   }
 }
@@ -66,8 +66,6 @@ class ShoppingCart extends Component {
     return sum;
   }
 
-
-
   addProduct(product) {
     const updatedItems = [...this.items];
     updatedItems.push(product);
@@ -75,15 +73,15 @@ class ShoppingCart extends Component {
   }
 
   render() {
-    const cartEl = this.createRootElement('section', 'cart');
-    cartEl.innerHTML = `
+    const createRootElement = this.createRootElement('section', 'cart');
+    createRootElement.innerHTML = `
       <h2>Total: \$${0}</h2>
       <button>Order Now!</button>
     `;
-    const orderButton = cartEl.querySelector('button');
+    const orderButton = createRootElement.querySelector('button');
     // orderButton.addEventListener('click', () => this.orderProducts());
     orderButton.addEventListener('click', this.orderProducts);
-    this.totalOutput = cartEl.querySelector('h2');
+    this.totalOutput = createRootElement.querySelector('h2');
   }
 }
 
