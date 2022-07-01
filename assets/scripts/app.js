@@ -158,7 +158,7 @@ class ProductList extends Component {
   }
 }
 
-class Shop {
+class Shop {  
   constructor() {
     this.render();
   }
