@@ -15,8 +15,8 @@ class ElementAttribute {
 }
 
 class Component {
-  constructor(renderHookId, shouldRender = true) {
-    this.hookId = renderHookId;
+  constructor(app, shouldRender = true) {
+    this.hookId = app;
     if (shouldRender) {
       this.render();
     }
@@ -40,8 +40,8 @@ class Component {
 }
 
 class ShoppingCart extends Component {
-  constructor(renderHookId) {
-    super(renderHookId, false);
+  constructor(app) {
+    super(app, false);
     this.orderProducts = () => {
       console.log('Ordering...');
       console.log(this.items);
@@ -88,8 +88,8 @@ class ShoppingCart extends Component {
 }
 
 class ProductItem extends Component {
-  constructor(product, renderHookId) {
-    super(renderHookId, false);
+  constructor(product, app) {
+    super(app, false);
     this.product = product;
     this.render();
   }
@@ -119,8 +119,8 @@ class ProductItem extends Component {
 class ProductList extends Component {
   #products = [];
 
-  constructor(renderHookId) {
-    super(renderHookId, false);
+  constructor(app) {
+    super(app, false);
     this.render();
     this.fetchProducts();
   }
