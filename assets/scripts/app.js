@@ -16,7 +16,7 @@ class ElementAttribute {
 
 class Component {
   constructor(app, shouldRender = true) {
-    this.hookId = app;
+    this.appId = app;
     if (shouldRender) {
       this.render();
     }
