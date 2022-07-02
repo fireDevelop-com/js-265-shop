@@ -50,16 +50,12 @@ class ShoppingCart extends Component {
 
   set cartItems(value) {
     this.items = value
-    this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(
-      2
-    )}</h2>`
+    this.totalOutput.innerHTML = `<h2>Total: \$${this.totalAmount.toFixed(2)}</h2>`
   }
 
   get totalAmount() {
     const sum = this.items.reduce(
-      (prevValue, curItem) => prevValue + curItem.price,
-      0
-    )
+      (prevValue, curItem) => prevValue + curItem.price,0)
     return sum
   }
 
@@ -71,10 +67,7 @@ class ShoppingCart extends Component {
 
   render() {
     const createRootElement = this.createRootElement('section', 'cart')
-    createRootElement.innerHTML = `
-      <h2>Total: \$${0}</h2>
-      <button>Order Now!</button>
-    `
+    createRootElement.innerHTML = `<h2>Total: \$${0}</h2><button>Order Now!</button>`
     const orderButton = createRootElement.querySelector('button')
     // orderButton.addEventListener('click', () => this.orderProducts())
     orderButton.addEventListener('click', this.orderProducts)
