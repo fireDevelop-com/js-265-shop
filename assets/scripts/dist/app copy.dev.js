@@ -6,6 +6,26 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+var Shop =
+/*#__PURE__*/
+function () {
+  function Shop() {
+    _classCallCheck(this, Shop);
+
+    this.render();
+  }
+
+  _createClass(Shop, [{
+    key: "render",
+    value: function render() {
+      this.cart = new ShoppingCart('app');
+      new ProductList('app');
+    }
+  }]);
+
+  return Shop;
+}();
+
 var App =
 /*#__PURE__*/
 function () {
