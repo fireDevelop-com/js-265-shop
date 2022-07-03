@@ -39,7 +39,7 @@ class Component {
   }
 }
 
-class ShoppingCart extends Component {
+class ShoppingCart extends Component{
   constructor(app) {
     super(app, false)
     this.orderProducts = () => {console.log('Ordering...'); console.log(this.items)}
