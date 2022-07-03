@@ -3,7 +3,7 @@ class Product {
     this.title = title
     this.image = image
     this.description = description
-    this.price = price
+    this.pr ice = price
   }
 }
 
