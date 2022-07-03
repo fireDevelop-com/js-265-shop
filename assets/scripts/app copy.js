@@ -1,10 +1,16 @@
-
+class ShoppingCart extends Components{
+  constructor(app){
+    super(app, false)
+    this.orderProducts = () => {console.log('ordering...'); console.log(this.items)}
+    this.render()
+  }
+}
 
 class Shop{
   constructor(){
     this.render()
   }
-  render(){
+  render(){ 
   this.cart = new ShoppingCart('app')
   new ProductList('app')
   }

@@ -1,7 +1,7 @@
 class Product {
   constructor(title, image, description, price) {
     this.title = title
-    this.imageUrl = image
+    this.image = image
     this.description = description
     this.price = price
   }
