@@ -69,7 +69,6 @@ class ShoppingCart extends Component {
     const createRootElement = this.createRootElement('section', 'cart')
     createRootElement.innerHTML = `<h2>Total: \$${0}</h2><button>Order Now!</button>`
     const orderButton = createRootElement.querySelector('button')
-    // orderButton.addEventListener('click', () => this.orderProducts())
     orderButton.addEventListener('click', this.orderProducts)
     this.totalOutput = createRootElement.querySelector('h2')
   }

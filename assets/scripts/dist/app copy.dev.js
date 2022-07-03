@@ -20,8 +20,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var ShoppingCart =
 /*#__PURE__*/
-function (_Components) {
-  _inherits(ShoppingCart, _Components);
+function (_Component) {
+  _inherits(ShoppingCart, _Component);
 
   function ShoppingCart(app) {
     var _this;
@@ -41,7 +41,7 @@ function (_Components) {
   }
 
   return ShoppingCart;
-}(Components);
+}(Component);
 
 var Shop =
 /*#__PURE__*/
