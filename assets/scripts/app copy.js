@@ -1,18 +1,22 @@
+class Component{
+  constructor(app, shouldRender = true){
+    this.appId = app
+    
+  }
+}
+
+
 class ShoppingCart extends Component{
   constructor(app){
     super(app, false)
     this.orderProducts = () => {console.log('ordering...'); console.log(this.items)}
-    this.render() 
+    this.render()
   }
   items = []
   render(){
-    const createRootElement = this.createRootElement('section', 'cart')
-    createRootElement.innerHTML = `<h2>Total: \$${0}</h2><button>Order Now!</button>`
-    const orderButton = createRootElement.querySelector('button')
+    const
   }
-
 }
-
 
 class Shop{
   constructor(){
@@ -31,4 +35,4 @@ class App {
   }
 }
 
-App.init()
+App.init()º

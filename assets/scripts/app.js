@@ -16,7 +16,7 @@ class ElementAttribute {
 
 class Component {
   constructor(app, shouldRender = true) {
-    this.appId = app
+    this.app = app
     if (shouldRender) {
       this.render()
     }
@@ -34,7 +34,7 @@ class Component {
         rootElement.setAttribute(attr.name, attr.value)
       }
     }
-    document.getElementById(this.appId).append(rootElement)
+    document.getElementById(this.app).append(rootElement)
     return rootElement
   }
 }
