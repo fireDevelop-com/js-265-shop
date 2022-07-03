@@ -3,14 +3,14 @@ class Product {
     this.title = title
     this.image = image
     this.description = description
-    this.pr ice = price
+    this.price = price
   }
 }
 
 class ElementAttribute {
-  constructor(attrName, attrValue) {
-    this.name = attrName
-    this.value = attrValue
+  constructor(name, value) {
+    this.name = name
+    this.value = value
   }
 }
 
